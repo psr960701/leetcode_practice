@@ -11,7 +11,7 @@ public:
     void down(vector<int>& heap,int i){
         while(true)
         {
-            int left = i*2+1<heap.size()? heap[i*2+1]:10001;
+            int left = i*2+1<heap.size()? heap[i*2+1]:10001; // 小根堆 大根堆的时候 设置为 INT_MIN；
             int right = i*2+2<heap.size()? heap[i*2+2]:10001;
             if(left<=right){
                 if (heap[i]>left) {

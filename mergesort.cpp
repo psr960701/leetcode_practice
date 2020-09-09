@@ -4,7 +4,7 @@
  
 using namespace std;
  
-void merge(vector<int> &arr,int L,int mid,int R)
+void merge(vector<int> &arr,int L,int mid,int R) //将拆分后的两个数组merge
 {
 	int *help = new int(R-L+1);
 	int p1=L,p2=mid+1,i=0;
@@ -22,7 +22,7 @@ void merge(vector<int> &arr,int L,int mid,int R)
 		arr[L+i] = help[i];
 	}
 }
-void sortprocess(vector<int> &arr,int L,int R)
+void sortprocess(vector<int> &arr,int L,int R)  //递归拆分数组；
 {
 	if (L < R)
 	{
